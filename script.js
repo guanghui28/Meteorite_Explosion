@@ -7,6 +7,7 @@ window.addEventListener("load", () => {
     ctx.fillStyle = "white";
     ctx.font = "30px Impact";
     ctx.textAlign = "left";
+    ctx.textBaseline = "top";
     class Asteroid {
         constructor(game) {
             this.game = game;
@@ -197,6 +198,7 @@ window.addEventListener("load", () => {
             ctx.fillText(`Score: ${this.score}`, 20, 30);
             if (this.score >= this.winningScore) {
                 ctx.save();
+                ctx.textBaseline = "middle";
                 ctx.font = "80px Impact";
                 ctx.textAlign = "center";
                 ctx.shadowOffsetX = 10;
